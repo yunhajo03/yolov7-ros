@@ -1,0 +1,6 @@
+Invoking command in '/home/yunhajo/yolov7-ros/build/yolov7_ros': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/yunhajo/yolov7-ros -DCMAKE_INSTALL_PREFIX=/home/yunhajo/yolov7-ros/install/yolov7_ros
+Invoked command in '/home/yunhajo/yolov7-ros/build/yolov7_ros' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/yunhajo/yolov7-ros -DCMAKE_INSTALL_PREFIX=/home/yunhajo/yolov7-ros/install/yolov7_ros
+Invoking command in '/home/yunhajo/yolov7-ros/build/yolov7_ros': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/yunhajo/yolov7-ros/build/yolov7_ros -- -j12 -l12
+Invoked command in '/home/yunhajo/yolov7-ros/build/yolov7_ros' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/yunhajo/yolov7-ros/build/yolov7_ros -- -j12 -l12
+Invoking command in '/home/yunhajo/yolov7-ros/build/yolov7_ros': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/yunhajo/yolov7-ros/build/yolov7_ros
+Invoked command in '/home/yunhajo/yolov7-ros/build/yolov7_ros' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/yunhajo/yolov7-ros/build/yolov7_ros

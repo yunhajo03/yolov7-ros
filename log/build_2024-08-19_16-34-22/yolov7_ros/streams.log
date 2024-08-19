@@ -1,0 +1,49 @@
+[0.008s] Invoking command in '/home/yunhajo/yolov7-ros/build/yolov7_ros': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/yunhajo/yolov7-ros -DCMAKE_INSTALL_PREFIX=/home/yunhajo/yolov7-ros/install/yolov7_ros
+[0.026s] -- Found ament_cmake: 1.3.9 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.356s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.477s] -- Found rclcpp: 16.0.9 (/opt/ros/humble/share/rclcpp/cmake)
+[0.531s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.538s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.551s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.568s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.594s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.674s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.677s] -- Found rmw_fastrtps_cpp: 6.2.6 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.771s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[0.798s] -- Found FastRTPS: /opt/ros/humble/include  
+[0.844s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.854s] -- Looking for pthread.h
+[0.924s] -- Looking for pthread.h - found
+[0.924s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[0.989s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[0.990s] -- Found Threads: TRUE  
+[1.151s] -- Found sensor_msgs: 4.2.4 (/opt/ros/humble/share/sensor_msgs/cmake)
+[1.268s] -- Found vision_msgs: 4.1.1 (/opt/ros/humble/share/vision_msgs/cmake)
+[1.332s] -- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+[1.394s] -- Configuring done
+[1.398s] -- Generating done
+[1.399s] -- Build files have been written to: /home/yunhajo/yolov7-ros/build/yolov7_ros
+[1.406s] Invoked command in '/home/yunhajo/yolov7-ros/build/yolov7_ros' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/yunhajo/yolov7-ros -DCMAKE_INSTALL_PREFIX=/home/yunhajo/yolov7-ros/install/yolov7_ros
+[1.408s] Invoking command in '/home/yunhajo/yolov7-ros/build/yolov7_ros': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/yunhajo/yolov7-ros/build/yolov7_ros -- -j12 -l12
+[1.442s] Invoked command in '/home/yunhajo/yolov7-ros/build/yolov7_ros' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/yunhajo/yolov7-ros/build/yolov7_ros -- -j12 -l12
+[1.468s] Invoking command in '/home/yunhajo/yolov7-ros/build/yolov7_ros': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/yunhajo/yolov7-ros/build/yolov7_ros
+[1.474s] -- Install configuration: ""
+[1.474s] -- Installing: /home/yunhajo/yolov7-ros/install/yolov7_ros/lib/yolov7_ros/detect_ros.py
+[1.491s] -- Up-to-date: /home/yunhajo/yolov7-ros/install/yolov7_ros/share/yolov7_ros/
+[1.491s] -- Installing: /home/yunhajo/yolov7-ros/install/yolov7_ros/share/yolov7_ros//yolov7.launch
+[1.501s] -- Installing: /home/yunhajo/yolov7-ros/install/yolov7_ros/share/ament_index/resource_index/package_run_dependencies/yolov7_ros
+[1.501s] -- Installing: /home/yunhajo/yolov7-ros/install/yolov7_ros/share/ament_index/resource_index/parent_prefix_path/yolov7_ros
+[1.502s] -- Installing: /home/yunhajo/yolov7-ros/install/yolov7_ros/share/yolov7_ros/environment/ament_prefix_path.sh
+[1.503s] -- Installing: /home/yunhajo/yolov7-ros/install/yolov7_ros/share/yolov7_ros/environment/ament_prefix_path.dsv
+[1.503s] -- Installing: /home/yunhajo/yolov7-ros/install/yolov7_ros/share/yolov7_ros/environment/path.sh
+[1.504s] -- Installing: /home/yunhajo/yolov7-ros/install/yolov7_ros/share/yolov7_ros/environment/path.dsv
+[1.504s] -- Installing: /home/yunhajo/yolov7-ros/install/yolov7_ros/share/yolov7_ros/local_setup.bash
+[1.505s] -- Installing: /home/yunhajo/yolov7-ros/install/yolov7_ros/share/yolov7_ros/local_setup.sh
+[1.505s] -- Installing: /home/yunhajo/yolov7-ros/install/yolov7_ros/share/yolov7_ros/local_setup.zsh
+[1.506s] -- Installing: /home/yunhajo/yolov7-ros/install/yolov7_ros/share/yolov7_ros/local_setup.dsv
+[1.506s] -- Installing: /home/yunhajo/yolov7-ros/install/yolov7_ros/share/yolov7_ros/package.dsv
+[1.506s] -- Installing: /home/yunhajo/yolov7-ros/install/yolov7_ros/share/ament_index/resource_index/packages/yolov7_ros
+[1.506s] -- Installing: /home/yunhajo/yolov7-ros/install/yolov7_ros/share/yolov7_ros/cmake/yolov7_rosConfig.cmake
+[1.506s] -- Installing: /home/yunhajo/yolov7-ros/install/yolov7_ros/share/yolov7_ros/cmake/yolov7_rosConfig-version.cmake
+[1.507s] -- Installing: /home/yunhajo/yolov7-ros/install/yolov7_ros/share/yolov7_ros/package.xml
+[1.508s] Invoked command in '/home/yunhajo/yolov7-ros/build/yolov7_ros' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/yunhajo/yolov7-ros/build/yolov7_ros

@@ -1,0 +1,105 @@
+[0.096s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.096s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=12, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x7ea41c03b100>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7ea41c12b850>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7ea41c12b850>>, mixin_verb=('build',))
+[0.131s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.131s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.131s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.131s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.131s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.131s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.131s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/yunhajo/yolov7-ros'
+[0.131s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.131s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.132s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.132s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.132s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.132s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.132s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.132s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.132s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.146s] DEBUG:colcon.colcon_core.package_identification:Package '.' with type 'ros.ament_cmake' and name 'yolov7_ros'
+[0.146s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.146s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.146s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.146s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.146s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.162s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.162s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.165s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 359 installed packages in /opt/ros/humble
+[0.166s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.204s] Level 5:colcon.colcon_core.verb:set package 'yolov7_ros' build argument 'cmake_args' from command line to 'None'
+[0.204s] Level 5:colcon.colcon_core.verb:set package 'yolov7_ros' build argument 'cmake_target' from command line to 'None'
+[0.204s] Level 5:colcon.colcon_core.verb:set package 'yolov7_ros' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.204s] Level 5:colcon.colcon_core.verb:set package 'yolov7_ros' build argument 'cmake_clean_cache' from command line to 'False'
+[0.204s] Level 5:colcon.colcon_core.verb:set package 'yolov7_ros' build argument 'cmake_clean_first' from command line to 'False'
+[0.204s] Level 5:colcon.colcon_core.verb:set package 'yolov7_ros' build argument 'cmake_force_configure' from command line to 'False'
+[0.204s] Level 5:colcon.colcon_core.verb:set package 'yolov7_ros' build argument 'ament_cmake_args' from command line to 'None'
+[0.205s] Level 5:colcon.colcon_core.verb:set package 'yolov7_ros' build argument 'catkin_cmake_args' from command line to 'None'
+[0.205s] Level 5:colcon.colcon_core.verb:set package 'yolov7_ros' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.205s] DEBUG:colcon.colcon_core.verb:Building package 'yolov7_ros' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/yunhajo/yolov7-ros/build/yolov7_ros', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/yunhajo/yolov7-ros/install/yolov7_ros', 'merge_install': False, 'path': '/home/yunhajo/yolov7-ros', 'symlink_install': False, 'test_result_base': None}
+[0.205s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.206s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.206s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/yunhajo/yolov7-ros' with build type 'ament_cmake'
+[0.206s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/yunhajo/yolov7-ros'
+[0.208s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.208s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.208s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.214s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/yunhajo/yolov7-ros/build/yolov7_ros': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/yunhajo/yolov7-ros -DCMAKE_INSTALL_PREFIX=/home/yunhajo/yolov7-ros/install/yolov7_ros
+[1.613s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/yunhajo/yolov7-ros/build/yolov7_ros' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/yunhajo/yolov7-ros -DCMAKE_INSTALL_PREFIX=/home/yunhajo/yolov7-ros/install/yolov7_ros
+[1.615s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/yunhajo/yolov7-ros/build/yolov7_ros': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/yunhajo/yolov7-ros/build/yolov7_ros -- -j12 -l12
+[1.648s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/yunhajo/yolov7-ros/build/yolov7_ros' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/yunhajo/yolov7-ros/build/yolov7_ros -- -j12 -l12
+[1.675s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/yunhajo/yolov7-ros/build/yolov7_ros': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/yunhajo/yolov7-ros/build/yolov7_ros
+[1.714s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(yolov7_ros)
+[1.715s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/yunhajo/yolov7-ros/build/yolov7_ros' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/yunhajo/yolov7-ros/build/yolov7_ros
+[1.716s] Level 1:colcon.colcon_core.environment:checking '/home/yunhajo/yolov7-ros/install/yolov7_ros' for CMake module files
+[1.717s] Level 1:colcon.colcon_core.environment:checking '/home/yunhajo/yolov7-ros/install/yolov7_ros' for CMake config files
+[1.717s] Level 1:colcon.colcon_core.shell:create_environment_hook('yolov7_ros', 'cmake_prefix_path')
+[1.717s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/yunhajo/yolov7-ros/install/yolov7_ros/share/yolov7_ros/hook/cmake_prefix_path.ps1'
+[1.718s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/yunhajo/yolov7-ros/install/yolov7_ros/share/yolov7_ros/hook/cmake_prefix_path.dsv'
+[1.718s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/yunhajo/yolov7-ros/install/yolov7_ros/share/yolov7_ros/hook/cmake_prefix_path.sh'
+[1.719s] Level 1:colcon.colcon_core.environment:checking '/home/yunhajo/yolov7-ros/install/yolov7_ros/lib'
+[1.719s] Level 1:colcon.colcon_core.environment:checking '/home/yunhajo/yolov7-ros/install/yolov7_ros/bin'
+[1.719s] Level 1:colcon.colcon_core.environment:checking '/home/yunhajo/yolov7-ros/install/yolov7_ros/lib/pkgconfig/yolov7_ros.pc'
+[1.719s] Level 1:colcon.colcon_core.environment:checking '/home/yunhajo/yolov7-ros/install/yolov7_ros/lib/python3.10/site-packages'
+[1.719s] Level 1:colcon.colcon_core.environment:checking '/home/yunhajo/yolov7-ros/install/yolov7_ros/bin'
+[1.719s] INFO:colcon.colcon_core.shell:Creating package script '/home/yunhajo/yolov7-ros/install/yolov7_ros/share/yolov7_ros/package.ps1'
+[1.720s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/yunhajo/yolov7-ros/install/yolov7_ros/share/yolov7_ros/package.dsv'
+[1.720s] INFO:colcon.colcon_core.shell:Creating package script '/home/yunhajo/yolov7-ros/install/yolov7_ros/share/yolov7_ros/package.sh'
+[1.721s] INFO:colcon.colcon_core.shell:Creating package script '/home/yunhajo/yolov7-ros/install/yolov7_ros/share/yolov7_ros/package.bash'
+[1.722s] INFO:colcon.colcon_core.shell:Creating package script '/home/yunhajo/yolov7-ros/install/yolov7_ros/share/yolov7_ros/package.zsh'
+[1.722s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/yunhajo/yolov7-ros/install/yolov7_ros/share/colcon-core/packages/yolov7_ros)
+[1.742s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(yolov7_ros)
+[1.742s] Level 1:colcon.colcon_core.environment:checking '/home/yunhajo/yolov7-ros/install/yolov7_ros' for CMake module files
+[1.742s] Level 1:colcon.colcon_core.environment:checking '/home/yunhajo/yolov7-ros/install/yolov7_ros' for CMake config files
+[1.743s] Level 1:colcon.colcon_core.shell:create_environment_hook('yolov7_ros', 'cmake_prefix_path')
+[1.743s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/yunhajo/yolov7-ros/install/yolov7_ros/share/yolov7_ros/hook/cmake_prefix_path.ps1'
+[1.743s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/yunhajo/yolov7-ros/install/yolov7_ros/share/yolov7_ros/hook/cmake_prefix_path.dsv'
+[1.744s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/yunhajo/yolov7-ros/install/yolov7_ros/share/yolov7_ros/hook/cmake_prefix_path.sh'
+[1.744s] Level 1:colcon.colcon_core.environment:checking '/home/yunhajo/yolov7-ros/install/yolov7_ros/lib'
+[1.744s] Level 1:colcon.colcon_core.environment:checking '/home/yunhajo/yolov7-ros/install/yolov7_ros/bin'
+[1.744s] Level 1:colcon.colcon_core.environment:checking '/home/yunhajo/yolov7-ros/install/yolov7_ros/lib/pkgconfig/yolov7_ros.pc'
+[1.744s] Level 1:colcon.colcon_core.environment:checking '/home/yunhajo/yolov7-ros/install/yolov7_ros/lib/python3.10/site-packages'
+[1.745s] Level 1:colcon.colcon_core.environment:checking '/home/yunhajo/yolov7-ros/install/yolov7_ros/bin'
+[1.745s] INFO:colcon.colcon_core.shell:Creating package script '/home/yunhajo/yolov7-ros/install/yolov7_ros/share/yolov7_ros/package.ps1'
+[1.746s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/yunhajo/yolov7-ros/install/yolov7_ros/share/yolov7_ros/package.dsv'
+[1.746s] INFO:colcon.colcon_core.shell:Creating package script '/home/yunhajo/yolov7-ros/install/yolov7_ros/share/yolov7_ros/package.sh'
+[1.747s] INFO:colcon.colcon_core.shell:Creating package script '/home/yunhajo/yolov7-ros/install/yolov7_ros/share/yolov7_ros/package.bash'
+[1.747s] INFO:colcon.colcon_core.shell:Creating package script '/home/yunhajo/yolov7-ros/install/yolov7_ros/share/yolov7_ros/package.zsh'
+[1.747s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/yunhajo/yolov7-ros/install/yolov7_ros/share/colcon-core/packages/yolov7_ros)
+[1.748s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[1.748s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[1.748s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[1.748s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[1.754s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[1.754s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[1.754s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[1.766s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[1.766s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/yunhajo/yolov7-ros/install/local_setup.ps1'
+[1.767s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/yunhajo/yolov7-ros/install/_local_setup_util_ps1.py'
+[1.769s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/yunhajo/yolov7-ros/install/setup.ps1'
+[1.769s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/yunhajo/yolov7-ros/install/local_setup.sh'
+[1.770s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/yunhajo/yolov7-ros/install/_local_setup_util_sh.py'
+[1.771s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/yunhajo/yolov7-ros/install/setup.sh'
+[1.772s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/yunhajo/yolov7-ros/install/local_setup.bash'
+[1.773s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/yunhajo/yolov7-ros/install/setup.bash'
+[1.774s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/yunhajo/yolov7-ros/install/local_setup.zsh'
+[1.774s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/yunhajo/yolov7-ros/install/setup.zsh'

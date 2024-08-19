@@ -1,0 +1,26 @@
+from launch import LaunchDescription
+from launch_ros.actions import Node
+
+
+def generate_launch_description():
+    return LaunchDescription([
+        Node(
+            package='yolov7_ros',
+            executable='detect_ros.py',
+            name='detect',
+            namespace='yolov7',
+            output='screen',
+            parameters=[
+                {'weights_path': 'weights/best.pt'},
+                {'classes_path': 'class_labels/test.txt'},
+                {'img_topic': '/image'},
+                {'out_topic': 'yolov7'},
+                {'conf_thresh': 0.35},
+                {'iou_thresh': 0.45},
+                {'queue_size': 1},
+                {'img_size': 640},
+                {'visualize': True},
+                {'device': 'cuda'}
+            ]
+        )
+    ])

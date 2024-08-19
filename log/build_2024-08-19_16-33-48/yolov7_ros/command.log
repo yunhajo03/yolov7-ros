@@ -1,0 +1,2 @@
+Invoking command in '/home/yunhajo/yolov7-ros/build/yolov7_ros': /usr/bin/cmake /home/yunhajo/yolov7-ros -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/yunhajo/yolov7-ros/install/yolov7_ros
+Invoked command in '/home/yunhajo/yolov7-ros/build/yolov7_ros' returned '1': /usr/bin/cmake /home/yunhajo/yolov7-ros -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/yunhajo/yolov7-ros/install/yolov7_ros

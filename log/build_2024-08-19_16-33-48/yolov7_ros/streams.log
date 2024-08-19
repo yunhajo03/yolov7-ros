@@ -1,0 +1,33 @@
+[0.008s] Invoking command in '/home/yunhajo/yolov7-ros/build/yolov7_ros': /usr/bin/cmake /home/yunhajo/yolov7-ros -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/yunhajo/yolov7-ros/install/yolov7_ros
+[0.156s] -- The C compiler identification is GNU 11.4.0
+[0.276s] -- The CXX compiler identification is GNU 11.4.0
+[0.287s] -- Detecting C compiler ABI info
+[0.348s] -- Detecting C compiler ABI info - done
+[0.356s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.357s] -- Detecting C compile features
+[0.357s] -- Detecting C compile features - done
+[0.361s] -- Detecting CXX compiler ABI info
+[0.431s] -- Detecting CXX compiler ABI info - done
+[0.438s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.439s] -- Detecting CXX compile features
+[0.439s] -- Detecting CXX compile features - done
+[0.452s] [31mCMake Error at CMakeLists.txt:10 (find_package):
+[0.452s]   By not providing "Findcatkin.cmake" in CMAKE_MODULE_PATH this project has
+[0.452s]   asked CMake to find a package configuration file provided by "catkin", but
+[0.452s]   CMake did not find one.
+[0.452s] 
+[0.452s]   Could not find a package configuration file provided by "catkin" with any
+[0.452s]   of the following names:
+[0.452s] 
+[0.452s]     catkinConfig.cmake
+[0.452s]     catkin-config.cmake
+[0.452s] 
+[0.452s]   Add the installation prefix of "catkin" to CMAKE_PREFIX_PATH or set
+[0.452s]   "catkin_DIR" to a directory containing one of the above files.  If "catkin"
+[0.452s]   provides a separate development package or SDK, be sure it has been
+[0.452s]   installed.
+[0.452s] 
+[0.453s] [0m
+[0.453s] -- Configuring incomplete, errors occurred!
+[0.453s] See also "/home/yunhajo/yolov7-ros/build/yolov7_ros/CMakeFiles/CMakeOutput.log".
+[0.455s] Invoked command in '/home/yunhajo/yolov7-ros/build/yolov7_ros' returned '1': /usr/bin/cmake /home/yunhajo/yolov7-ros -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/yunhajo/yolov7-ros/install/yolov7_ros
