@@ -24,10 +24,11 @@ from utils.general import check_img_size, check_requirements, check_imshow, non_
 from utils.plots import plot_one_box
 from utils.torch_utils import select_device, load_classifier, time_synchronized, TracedModel
 
-
+from geometry_msgs.msg import Point, PoseStamped
 from vision_msgs.msg import Detection2DArray, Detection2D, BoundingBox2D
 from sensor_msgs.msg import Image
 from cv_bridge import CvBridge
+from std_srvs.srv import Trigger
 
 def parse_classes_file(path):
     classes = []
@@ -112,6 +113,7 @@ class Yolov7Publisher(Node):
         """
         super().__init__('yolov7_node')
 
+        self.start = True
 
         self.img_size = img_size
         self.device = device
@@ -139,69 +141,76 @@ class Yolov7Publisher(Node):
         self.detection_publisher = self.create_publisher(
             Detection2DArray, pub_topic, queue_size
         )
+
+        self.yolov7_ros_subscriber = self.create_subscription(Point, 'state_machine/tracking_start', self.start_inference, 10)
         self.get_logger().info("YOLOv7 initialization complete. Ready to start inference")
         self.counter = 0
 
+    def start_inference(self, message):
+        self.get_logger().info("Starting inference.")
+        self.start = True
 
     def process_img_msg(self, img_msg: Image):
         """ callback function for publisher """
-        np_img_orig = self.bridge.imgmsg_to_cv2(
-            img_msg, desired_encoding='bgr8'
-        )
+        # self.get_logger().info("Processing image. " + str(self.start))
+        if self.start:
+            np_img_orig = self.bridge.imgmsg_to_cv2(
+                img_msg, desired_encoding='bgr8'
+            )
 
 
-        # handle possible different img formats
-        if len(np_img_orig.shape) == 2:
-            np_img_orig = np.stack([np_img_orig] * 3, axis=2)
+            # handle possible different img formats
+            if len(np_img_orig.shape) == 2:
+                np_img_orig = np.stack([np_img_orig] * 3, axis=2)
 
 
-        h_orig, w_orig, c = np_img_orig.shape
+            h_orig, w_orig, c = np_img_orig.shape
 
 
-        # automatically resize the image to the next smaller possible size
-        w_scaled, h_scaled = self.img_size
-        np_img_resized = cv2.resize(np_img_orig, (w_scaled, h_scaled))
+            # automatically resize the image to the next smaller possible size
+            w_scaled, h_scaled = self.img_size
+            np_img_resized = cv2.resize(np_img_orig, (w_scaled, h_scaled))
 
 
-        # conversion to torch tensor (copied from original yolov7 repo)
-        img = np_img_resized.transpose((2, 0, 1))[::-1]  # HWC to CHW, BGR to RGB
-        img = torch.from_numpy(np.ascontiguousarray(img))
-        img = img.float()  # uint8 to fp16/32
-        img /= 255  # 0 - 255 to 0.0 - 1.
-        img = img.to(self.device)
+            # conversion to torch tensor (copied from original yolov7 repo)
+            img = np_img_resized.transpose((2, 0, 1))[::-1]  # HWC to CHW, BGR to RGB
+            img = torch.from_numpy(np.ascontiguousarray(img))
+            img = img.float()  # uint8 to fp16/32
+            img /= 255  # 0 - 255 to 0.0 - 1.
+            img = img.to(self.device)
 
 
-        # inference & rescaling the output to original img size
-        detections = self.model.inference(img)
-        detections[:, :4] = rescale(
-            [h_scaled, w_scaled], detections[:, :4], [h_orig, w_orig])
-        detections[:, :4] = detections[:, :4].round()
+            # inference & rescaling the output to original img size
+            detections = self.model.inference(img)
+            detections[:, :4] = rescale(
+                [h_scaled, w_scaled], detections[:, :4], [h_orig, w_orig])
+            detections[:, :4] = detections[:, :4].round()
 
 
-        # publishing
-        detection_msg = create_detection_msg(img_msg, detections, self.get_clock().now().to_msg())
-        self.detection_publisher.publish(detection_msg)
+            # publishing
+            detection_msg = create_detection_msg(img_msg, detections, self.get_clock().now().to_msg())
+            self.detection_publisher.publish(detection_msg)
 
-        # self.get_logger().info(str(detections))
+            # self.get_logger().info(str(detections))
 
 
-        # visualizing if required
-        # bboxes = [[int(x1), int(y1), int(x2), int(y2)]
-        #             for x1, y1, x2, y2 in detections[:, :4].tolist()]
-        # classes = [int(c) for c in detections[:, 5].tolist()]
-        # vis_img = draw_detections(np_img_orig, bboxes, classes,
-        #                             self.class_labels)
-        # image_name = os.path.join("images", f"image_{self.counter:04}.png")
-        # cv2.imwrite(image_name, vis_img)
-        # self.counter += 1
-        if self.visualization_publisher:
-            bboxes = [[int(x1), int(y1), int(x2), int(y2)]
-                      for x1, y1, x2, y2 in detections[:, :4].tolist()]
-            classes = [int(c) for c in detections[:, 5].tolist()]
-            vis_img = draw_detections(np_img_orig, bboxes, classes,
-                                      self.class_labels)
-            vis_msg = self.bridge.cv2_to_imgmsg(vis_img, encoding="bgr8")
-            self.visualization_publisher.publish(vis_msg)
+            # visualizing if required
+            # bboxes = [[int(x1), int(y1), int(x2), int(y2)]
+            #             for x1, y1, x2, y2 in detections[:, :4].tolist()]
+            # classes = [int(c) for c in detections[:, 5].tolist()]
+            # vis_img = draw_detections(np_img_orig, bboxes, classes,
+            #                             self.class_labels)
+            # image_name = os.path.join("images", f"image_{self.counter:04}.png")
+            # cv2.imwrite(image_name, vis_img)
+            # self.counter += 1
+            if self.visualization_publisher:
+                bboxes = [[int(x1), int(y1), int(x2), int(y2)]
+                        for x1, y1, x2, y2 in detections[:, :4].tolist()]
+                classes = [int(c) for c in detections[:, 5].tolist()]
+                vis_img = draw_detections(np_img_orig, bboxes, classes,
+                                        self.class_labels)
+                vis_msg = self.bridge.cv2_to_imgmsg(vis_img, encoding="bgr8")
+                self.visualization_publisher.publish(vis_msg)
 
 
 def main(args=None):
